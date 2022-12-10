@@ -137,7 +137,7 @@ server <- function(input, output) {
       )
     
     #Creates a line/scatter plot of US population within selected year range
-    populationplot <-ggplot(scatter_data, aes(x = year, y = population)) + 
+    populationplot <- ggplot(plot_data, aes(x = year, y = population)) + 
       geom_line() + 
       geom_point() +
       xlab("Year") +

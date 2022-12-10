@@ -4,6 +4,7 @@ library(shiny)
 library(shinythemes)
 library(shinyWidgets)
 library(bslib)
+library(plotly)
 
 #allows user to select relevant metric
 metric_input <- selectInput(
@@ -63,7 +64,7 @@ interactive_page <- tabPanel(
       plotlyOutput("scatterplot"),
       p("This plot shows a variety of specific United State emission per capita metrics from the years 1990 - 2021. Some interesting information we can see from different graphs, are that while certain per capita graphs decrease in similar fashion to overall CO2 emissions per capita over the years, the per capita graph for Gas is actually increasing. One takeaway from this, is for people to find more sustainable alternatives to driving to destinations."),
       plotlyOutput("populationplot"),
-      p("This plot shows population data from the year 1990 through 2021. Users can use this data alongside the emissions per capita graph to calculate total emissions per year. Although most emissions show decreasing per capita rates, when multiplying population by per capita rate we can see that we are cutting emissions faster than the population is growing - recent years have shown a decrease in overall CO2 emissions despite population gains.")
+      p("This plot shows population data from the year 1990 through 2021. Users can use this data alongside the emissions per capita graph to calculate total emissions per year. Although population may seem like it is increasing faster than the per capita rate is decreasing, when multiplying population by per capita rate we can see that we are cutting emissions faster than the population is growing - recent years have shown a decrease in overall CO2 emissions despite population gains.")
     )
   )
 )
